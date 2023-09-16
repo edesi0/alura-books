@@ -1,17 +1,21 @@
+
 import './estilo.css';
 
-const listaOpcoes = ['CATEGORAIS', 'FAVORITOS', 'MINHA ESTANTE'];
+const itemsLista = ['CATEGORIAS','FAVORITOS','MINHA ESTANTE'];
+function ListaItems() {
 
-function listaCabecalho(){
     return (
-        <ul className='opcoes'>
-          {listaOpcoes.map((itemLista)=>(
-            <li className='opcao'>
-                <p>{itemLista}</p>
-            </li>
-             
-          ))}
-        </ul>
+        <div className='contentLista'>     
+            <ul className='lista'>
+              { itemsLista.map(
+                (item)=>(
+                  <li className='itemLista'>{item}</li>  
+                )
+              )}
+            </ul>
+            
+        </div>
     );
+
 }
-export default listaCabecalho;
+export default ListaItems;

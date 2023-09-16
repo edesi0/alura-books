@@ -1,16 +1,17 @@
 import './App.css';
-import listaCabecalho from './componentes/listaCabecalho/index';
-import Logo from './componentes/logo/index.js';
-
+import React from 'react';
+import Header from './componentes/Header/index.js';
 
 function App() {
   return (
     <div classname="App">
       <header classname="App-header">
-      <Logo></Logo>
-      <listaCabecalho></listaCabecalho>
+      <Header/>
       </header>
     </div>
+
+
+
   );
 }
 

@@ -1,14 +1,20 @@
 import perfil from '../../img/perfil.svg';
 import sacola from '../../img/sacola.svg';
+import './estilo.css';
 
-const listaIcones=[perfil,sacola];
+const listaIcones = [perfil, sacola];
 
-function listaCabecalhoIcones(){
-    return(
-        <ul>
+function ListaCabecalhoIcones() {
+    return (
+        <ul className='listaIcones'>
+            {listaIcones.map((icone) => (
 
+                <li className='icone'><img src={icone}></img></li>
+             )
+            )
+            }
         </ul>
     );
 }
 
- export default listaCabecalhoIcones;
+export default ListaCabecalhoIcones;

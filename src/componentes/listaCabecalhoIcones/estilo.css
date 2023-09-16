@@ -1,0 +1,14 @@
+li{
+    list-style:none;
+}
+
+.listaIcones{
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+}
+.icone{
+min-width: 50px; 
+align-items: center;
+}
