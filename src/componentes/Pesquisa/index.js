@@ -27,7 +27,6 @@ margin-bottom: 40px;
 function Pesquisa() {
     const [livrosPesquisados, setLivrosPesquisados] = useState({});
 
-    console.log(livrosPesquisados);
     return (
         <PesquisaContainer>
             <Titulo>Já sabe por onde começar?</Titulo>
@@ -39,10 +38,16 @@ function Pesquisa() {
                     const resultadoPesquisa = livros.filter(
                         livro => livro.nome.includes(textoDigitado))
                     setLivrosPesquisados(resultadoPesquisa);
-                }
-            }
-            />
+                }}/>
+                
+            {livrosPesquisados.map(livro=>(
+            <div> 
+            <p>{livro.nome}</p> 
+            <img src={livro.src}/>
+            </div> 
+            ))}
         </PesquisaContainer>
+
     );
 }
 
