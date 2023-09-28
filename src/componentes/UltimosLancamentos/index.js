@@ -7,7 +7,10 @@ const Section = styled.section`
 background-color: #EBECEE;
 border-radius: 1px;
 padding: 5px 5px 5px 5px;
-flex-direction: column;
+display: flexbox;
+`
+const P = styled.p`
+font-family: Roboto;
 `
 
 function UltimosLancamentos() {
@@ -19,7 +22,7 @@ function UltimosLancamentos() {
             {Livros.map(
                 livro => (
                     <React.Fragment>
-                        <p>{livro.nome}</p>
+                        <P>{livro.nome}</P>
                         <img src={livro.scr}/>
                     </React.Fragment>
                 )
