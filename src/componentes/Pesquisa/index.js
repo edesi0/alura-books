@@ -1,7 +1,7 @@
 import Input from "../Input";
 import styled from "styled-components";
 import { useState } from "react";
-import { livros } from './dadosPesquisa'
+import { Livros } from './dadosPesquisa'
 
 
 const PesquisaContainer = styled.section`
@@ -25,7 +25,7 @@ margin-bottom: 40px;
 `
 
 function Pesquisa() {
-    const [livrosPesquisados, setLivrosPesquisados] = useState({});
+    const [livrosPesquisados, setLivrosPesquisados] = useState([]);
 
     return (
         <PesquisaContainer>
@@ -35,7 +35,7 @@ function Pesquisa() {
                 onBlur={evento => {
 
                     const textoDigitado = evento.target.value;
-                    const resultadoPesquisa = livros.filter(
+                    const resultadoPesquisa = Livros.filter(
                         livro => livro.nome.includes(textoDigitado))
                     setLivrosPesquisados(resultadoPesquisa);
                 }}/>
