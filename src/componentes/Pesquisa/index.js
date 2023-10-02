@@ -9,7 +9,6 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 color: #fff;
 text-align: center;
 padding: 85px 0;
-height: 150px;
 width: 100%;
 `
 const Titulo = styled.h2`
@@ -41,10 +40,10 @@ function Pesquisa() {
                 }}/>
                 
             {livrosPesquisados.map(livro=>(
-            <div> 
+            <>
             <p>{livro.nome}</p> 
             <img src={livro.src}/>
-            </div> 
+           </>
             ))}
         </PesquisaContainer>
 
